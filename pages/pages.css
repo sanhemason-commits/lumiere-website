@@ -1,0 +1,315 @@
+/* =====================
+COLLECTION HERO
+Fashion-editorial hero for collection subpages.
+Shorter than homepage (65vh), no parallax,
+refined border-style CTA.
+===================== */
+
+.collection-hero{
+height:65vh;
+position:relative;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+background:
+url("../images/hero.png")
+center/cover no-repeat;
+}
+
+
+.collection-hero-mask{
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,.15),
+rgba(0,0,0,.45)
+);
+z-index:3;
+}
+
+
+.collection-hero-text{
+position:relative;
+z-index:5;
+text-align:center;
+color:white;
+}
+
+
+.collection-hero-text h1{
+font-size:60px;
+font-weight:300;
+letter-spacing:14px;
+line-height:1.15;
+}
+
+
+.collection-hero-text p{
+margin-top:35px;
+font-size:16px;
+letter-spacing:6px;
+}
+
+
+.collection-hero-text a{
+display:inline-block;
+margin-top:40px;
+padding:18px 65px;
+border:1px solid rgba(255,255,255,.7);
+color:white;
+font-size:13px;
+letter-spacing:5px;
+transition:.5s;
+}
+
+
+.collection-hero-text a:hover{
+background:white;
+color:#111;
+border-color:white;
+transform:translateY(-8px);
+}
+
+
+
+
+/* =====================
+COLLECTION INTRO
+Warm-background section with key selling points.
+Reusable across all collection pages.
+===================== */
+
+.collection-intro{
+padding:140px 10%;
+background:#f8f5ef;
+}
+
+
+.intro-inner{
+text-align:center;
+max-width:900px;
+margin:0 auto;
+}
+
+
+.intro-inner h2{
+font-size:50px;
+font-weight:300;
+letter-spacing:10px;
+margin-bottom:35px;
+}
+
+
+.intro-desc{
+font-size:18px;
+line-height:2;
+color:#555;
+margin-bottom:70px;
+letter-spacing:1px;
+}
+
+
+.intro-points{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+}
+
+
+.intro-point h3{
+font-size:16px;
+font-weight:400;
+letter-spacing:3px;
+margin-bottom:15px;
+}
+
+
+.intro-point p{
+font-size:14px;
+line-height:1.8;
+color:#777;
+}
+
+
+
+
+/* =====================
+COLLECTION FEATURES
+"Why Choose" section — 4-column feature cards.
+Reusable across all collection pages.
+===================== */
+
+.collection-features{
+padding:140px 10%;
+}
+
+
+.features-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:50px;
+margin-top:80px;
+}
+
+
+.feature-card{
+text-align:center;
+}
+
+
+.feature-card h3{
+font-size:18px;
+font-weight:400;
+letter-spacing:3px;
+margin-bottom:20px;
+}
+
+
+.feature-card p{
+font-size:15px;
+line-height:1.8;
+color:#777;
+}
+
+
+
+
+/* =====================
+PRIVATE CONSULTATION
+CTA section with WhatsApp and email.
+Reuses .whatsapp-btn and .contact-email
+from style.css.
+===================== */
+
+.consultation{
+padding:140px 10%;
+background:#f8f5ef;
+text-align:center;
+}
+
+
+.consultation-inner h2{
+font-size:50px;
+font-weight:300;
+letter-spacing:10px;
+margin-bottom:35px;
+}
+
+
+.consultation-desc{
+font-size:17px;
+line-height:2;
+letter-spacing:2px;
+color:#555;
+font-style:italic;
+margin-bottom:50px;
+}
+
+
+
+
+/* =====================
+PRODUCT CARD AS LINK
+Ensures <a> product cards fill their
+grid cell correctly.
+===================== */
+
+a.product-card{
+display:block;
+}
+
+
+
+
+/* =====================
+CURRENT PAGE INDICATOR
+Highlights the active page in the
+side menu navigation.
+===================== */
+
+.side-menu a.current-page{
+font-weight:500;
+}
+
+
+
+
+/* =====================
+MOBILE
+===================== */
+
+@media(max-width:900px){
+
+
+.collection-hero{
+height:55vh;
+}
+
+
+.collection-hero-text h1{
+font-size:38px;
+letter-spacing:8px;
+}
+
+
+.collection-hero-text p{
+font-size:13px;
+letter-spacing:4px;
+}
+
+
+.collection-hero-text a{
+padding:16px 45px;
+font-size:12px;
+}
+
+
+.collection-intro{
+padding:100px 6%;
+}
+
+
+.intro-inner h2{
+font-size:38px;
+letter-spacing:6px;
+}
+
+
+.intro-desc{
+font-size:16px;
+margin-bottom:50px;
+}
+
+
+.intro-points{
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+
+.collection-features{
+padding:100px 6%;
+}
+
+
+.features-grid{
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+
+.consultation{
+padding:100px 6%;
+}
+
+
+.consultation-inner h2{
+font-size:38px;
+letter-spacing:6px;
+}
+
+
+}
