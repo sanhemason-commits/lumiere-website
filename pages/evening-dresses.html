@@ -138,6 +138,11 @@ COLLECTION HERO
 <section class="collection-hero">
 
 
+<img class="collection-hero-img"
+src="../images/evening-hero.png"
+alt="LUMIERE Evening Dresses">
+
+
 <div class="collection-hero-mask">
 </div>
 
@@ -548,6 +553,47 @@ sideMenu.classList.add("active");
 
 closeMenu.onclick=function(){
 sideMenu.classList.remove("active");
+}
+
+
+
+
+/* =====================
+HERO SCROLL ROTATION
+As user scrolls, the hero image
+subtly rotates on Y-axis, creating
+a model "turning" illusion.
+===================== */
+
+const heroImg = document.querySelector(".collection-hero-img");
+const heroSection = document.querySelector(".collection-hero");
+
+if(heroImg && heroSection){
+
+window.addEventListener("scroll",()=>{
+
+const rect = heroSection.getBoundingClientRect();
+const heroHeight = heroSection.offsetHeight;
+const scrollProgress = -rect.top / heroHeight;
+
+if(scrollProgress > 0 && scrollProgress < 1.5){
+
+heroImg.style.transform =
+"perspective(1200px) rotateY(" +
+(scrollProgress * 18) +
+"deg) scale(1.03)";
+
+}
+
+else if(scrollProgress <= 0){
+
+heroImg.style.transform =
+"perspective(1200px) rotateY(0deg) scale(1)";
+
+}
+
+});
+
 }
 
 
